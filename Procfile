@@ -1,0 +1,1 @@
+worker: python pyrogram_bot.py
