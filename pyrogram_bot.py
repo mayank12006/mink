@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 API_ID = int(os.environ.get("API_ID", 22080529))
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "your_bot_token")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7886843424:AAGuC-3JZC_80lwEzxfs_g8kPrybefOikac")
 
 app = Client("mink_bot", api_id=API_ID, bot_token=BOT_TOKEN)
 
