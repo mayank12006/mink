@@ -7,6 +7,7 @@ logging.basicConfig(level=logging.INFO)
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "your_bot_token")
 
+# ✅ Run in BOT MODE only
 app = Client("mink_bot", bot_token=BOT_TOKEN)
 
 @app.on_message(filters.command("start"))
