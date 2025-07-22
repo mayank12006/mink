@@ -5,14 +5,16 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
+API_ID = int(os.environ.get("API_ID", 12345))
+API_HASH = os.environ.get("API_HASH", "your_api_hash")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "your_bot_token")
 
-# ✅ Run in BOT MODE only
-app = Client("mink_bot", bot_token=BOT_TOKEN)
+app = Client("mink_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 @app.on_message(filters.command("start"))
 async def start(client, message: Message):
-    await message.reply("👋 Welcome to MinkBot V2 with Pyrogram!")
+    await message.reply("👋 Welcome to MinkBot V2 with Pyrogram!
+Send a voice message or audio file to identify music.")
 
 @app.on_message(filters.audio | filters.voice)
 async def handle_audio(client, message: Message):
