@@ -6,9 +6,9 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 API_ID = int(os.environ.get("API_ID", 22080529))
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7886843424:AAGuC-3JZC_80lwEzxfs_g8kPrybefOikac")
+API_HASH = os.environ.get("API_HASH", "8c5ef7fe6857ea7aca95175ed2dcfbaa")
 
-app = Client("minkadi_bot", api_id=API_ID, bot_token=BOT_TOKEN)
+app = Client("minkadi_bot", api_id=API_ID, api_hash=API_HASH)
 
 @app.on_message(filters.command("start"))
 async def start(client, message: Message):
