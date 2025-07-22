@@ -13,8 +13,7 @@ app = Client("mink_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 @app.on_message(filters.command("start"))
 async def start(client, message: Message):
-    await message.reply("👋 Welcome to MinkBot V2 with Pyrogram!
-Send a voice message or audio file to identify music.")
+    await message.reply("👋 Welcome to MinkBot V2 with Pyrogram!")
 
 @app.on_message(filters.audio | filters.voice)
 async def handle_audio(client, message: Message):
